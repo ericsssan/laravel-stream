@@ -1,0 +1,59 @@
+{
+    "name": "coditect-sg/laravelredisstreamsconsumer",
+    "description": "Laravel Redis Streams Consumer powered by Swoole.",
+    "keywords": [
+        "coditect-sg",
+        "laravel",
+        "redis",
+        "streams",
+        "consumer",
+        "swoole",
+        "coroutine"
+    ],
+    "homepage": "https://github.com/coditect-sg/laravelredisstreamsconsumer",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Eric San",
+            "email": "ericsssan@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.0",
+        "illuminate/support": "^8.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.0",
+        "phpunit/phpunit": "^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "CoditectSg\\LaravelRedisStreamsConsumer\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "CoditectSg\\LaravelRedisStreamsConsumer\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "CoditectSg\\LaravelRedisStreamsConsumer\\LaravelRedisStreamsConsumerServiceProvider"
+            ],
+            "aliases": {
+                "LaravelRedisStreamsConsumer": "CoditectSg\\LaravelRedisStreamsConsumer\\LaravelRedisStreamsConsumerFacade"
+            }
+        }
+    }
+}
